@@ -74,11 +74,10 @@ boton.addEventListener("click", () => {
         .then((usuario) => {
             const result = document.getElementById("texto");
             
-            result.textContent =`Nombre: ${usuario.name} - Email: ${usuario.email}`;
+            
 
             if(id===1){
                 tarjeta.textContent = "name:"+ "Juan Pérez"+"juan.perez@example.com";
-                
                 contenedor.appendChild(tarjeta);
             }else if(id===2 ){
                 tarjeta.textContent = "nombre: Maria Gomes"+"email: juan.perez@example.com";
