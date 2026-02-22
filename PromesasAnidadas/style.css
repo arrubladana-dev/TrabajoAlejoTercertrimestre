@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma;
+}
+.contenedorPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(151, 72, 196, 0.603);
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(213, 192, 233);
+    padding: 20px;
+    border-radius: 10px;
+}
+.datosUsuario{
+    margin-bottom: 10px;
+}
+.datos{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.boton{
+    padding: 8px;
+    border-radius: 8px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: inline;
+}
+.productosUsuario{
+    background-color: rgba(29, 41, 145, 0.616);
+    border-left: 4px solid rgba(46, 29, 145, 0.856);
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px;
+}

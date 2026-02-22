@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedorPrincipal">
+        <div class="contenedor">
+            <input class="boton" type="number" id="input">
+            <br>
+            <button class="boton" id="boton" >Buescar perfil</button>
+            <br>
+            <span id="mensaje" class="hide">Cargando.....</span>
+            <br>
+            <div class="datos hide" id="datosContenedor">
+                <div class="contUsuario">
+                    <br>
+                    
+                    <div class="datosUsuario">
+                        <h2 class="subTitulo"> Datos usuario</h2>
+                        <span class="negrita">nombre:</span>
+                        <span id="nombreUs"></span>
+                        <br>
+                        <span class="negrita">Email:</span>
+                        <span id="emailUs"></span>
+                        <br>
+                        <span class="negrita">Ciudad:</span>
+                        <span id="ciudadUs"></span>
+                    </div>
+                </div>
+                <div class="productosUsuario hide" id="conteProduc">
+                    <h2>Productos del usuario</h2>
+                    <span>nombre:</span>
+                    <span id="nombrePro"></span>
+                    <br>
+                    <span>precio</span>
+                    <span id="precioPro"></span>
+                    <br>
+                    <span>Estado:</span>
+                    <span id="estadoPro"></span>
+                </div>
+                <div class="productosUsuario hide " id="conteProduc2">
+                    <span>nombre:</span>
+                    <span id="nombrePro2"></span>
+                    <br>
+                    <span>precio</span>
+                    <span id="precioPro2"></span>
+                    <br>
+                    <span>Estado:</span>
+                    <span id="estadoPro2"></span>
+                </div>
+                <div class="productosUsuario hide " id="ultimoProducto">
+                    <h2>Ultima compra realizada</h2>
+                    <span>nombre:</span>
+                    <span id="nombrePro3"></span>
+                    <br>
+                    <span>precio</span>
+                    <span id="precioPro3"></span>
+                    <br>
+                    <span>Estado:</span>
+                    <span id="estadoPro3"></span>
+                    
+                </div>
+                
+            </div>
+            <div class="productosUsuario hide " id="error" >
+                    <h2 id="h2"></h2>
+                </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
