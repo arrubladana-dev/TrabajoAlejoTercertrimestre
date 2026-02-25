@@ -161,5 +161,5 @@ boton.addEventListener("click", () => {
             boton.disabled = false;
             
         });
-        document.getElementById("input").value = "";
+        document.getElementById("input").value = ""; 
 });
