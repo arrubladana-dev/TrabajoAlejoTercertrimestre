@@ -1,0 +1,136 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0c10;
+color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:30px 20px;
+}
+
+header h1{
+color:#7fff00;
+font-size:2.5rem;
+margin-bottom:10px;
+text-shadow:0 0 10px #39ff14;
+}
+
+header p{
+color:#ccc;
+}
+
+/* CONTENEDOR */
+
+.container{
+width:90%;
+max-width:1100px;
+text-align:center;
+}
+
+/* BOTON */
+
+.boton{
+margin:20px 0;
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+background:#39ff14;
+color:black;
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.boton:hover{
+background:#7fff00;
+transform:scale(1.05);
+}
+
+/* GRID DE TARJETAS */
+
+.contenedorPersonajes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding-bottom:40px;
+background:#1f2833;
+border-radius:12px;
+padding:15px;
+box-shadow:0 0 15px rgba(57,255,20,0.3);
+transition:0.3s;
+}
+
+/* TARJETA */
+
+.card{
+
+}
+
+.contenedorPersonajes:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(57,255,20,0.6);
+}
+
+/* IMAGEN PERSONAJE */
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* TEXTO */
+h3{
+color:#7fff00;
+margin-bottom:5px;
+}
+
+p{
+color:#ddd;
+font-size:14px;
+}
+
+/* ERROR */
+
+.error{
+color:#ff4c4c;
+margin-top:15px;
+font-weight:bold;
+}
+
+
+@media (max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.btn{
+width:100%;
+}
+
+}
+
+@media (max-width:480px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+}
