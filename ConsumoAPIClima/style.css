@@ -1,0 +1,127 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0c10;
+color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:30px 20px;
+}
+
+header h1{
+color:#323bb9cb;
+font-size:2.5rem;
+margin-bottom:10px;
+text-shadow:0 0 10px #2b14ffbb;
+}
+
+header p{
+color:#ccc;
+}
+
+/* CONTENEDOR */
+
+.container{
+width:90%;
+max-width:1100px;
+text-align:center;
+}
+
+/* BOTON */
+
+.boton{
+margin:20px 0;
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#3714ff;
+color:rgb(8, 3, 48);
+font-weight:bold;
+/* transition:0.3s; */
+}
+
+.boton:hover{
+background:#1114ccc5;
+transform:scale(1.05);
+}
+/* INPUT */
+input{
+    padding: 8px;
+    border-radius: 8px;
+}
+/*  TARJETAS */
+
+.contenedorDatos{
+display:flex;
+justify-content: center;
+align-items: center;
+padding-bottom:40px;
+background:#1f2833;
+border-radius:12px;
+padding:15px;
+box-shadow:0 0 15px rgba(43, 20, 255, 0.3);
+transition:0.3s;
+} 
+
+/* TARJETA */
+
+
+
+
+
+
+
+/* TEXTO */
+h3{
+color:#003cffcc;
+margin-bottom:5px;
+}
+
+p{
+color:#ddd;
+font-size:14px;
+}
+
+/* ERROR */
+
+.error{
+color:#ff4c4c;
+margin-top:15px;
+font-weight:bold;
+}
+
+
+@media (max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.btn{
+width:100%;
+}
+
+}
+
+@media (max-width:480px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+}
