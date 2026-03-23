@@ -1,8 +1,15 @@
-import { añadirEvento } from "./ui.js";
-import { getUsers } from "./serves.js";
+import { addBotonAntesEvent, addBotonDespuesEvent, render, addBotonPrimeraPagi, addBotonUltimoEvent, addBotonDosEvent, addBotonCincoEvent } from "./ui.js";
+import { goNextPage, goPrevPage, loadUsers, goFist, goLastPage, goTwo, goFive } from "./serves.js";
 
-function start() {
-    añadirEvento(getUsers);
+async function startApp() {
+    addBotonAntesEvent(goPrevPage);
+    addBotonDespuesEvent(goNextPage);
+    addBotonPrimeraPagi(goFist);
+    addBotonUltimoEvent(goLastPage);
+    addBotonDosEvent(goTwo);
+    addBotonCincoEvent(goFive);
+    await loadUsers();
+    render();
 }
 
-start();
+startApp();

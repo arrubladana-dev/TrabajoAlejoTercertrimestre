@@ -16,19 +16,32 @@
     <header>
         <h1>Rick and Morty Characters</h1>
         <p>Consumo de API </p>
+        <span id="mensaje">Cargando.....</span>
+        <span id="contadorPaginas"></span>
     </header>
 
-    <div class="container">
-
-        <button class="boton" id="botonCar">
-            Cargar personajes
+    <div  class="container">
+        <button class="boton" id="botonPrimero">
+            ⏮ Primera
         </button>
+        <button class="boton" id="botonSigui">
+            Siquiente
+        </button>
+        <button class="boton" id="botonAntes">
+            Anterior
+        </button>
+        
+        <button class="boton" id="botonMas2">+2</button>
+        <button class="boton" id="botonMas5">+5</button>
+        <button class="boton" id="botonUltimo">Última ⏭</button>
 
         <div class="contenedorPersonajes" id="contenedorPersonajes"></div>
 
         <p class="error" id="errorMsg"></p>
+        
 
     </div>
+
 
 </body>
 
