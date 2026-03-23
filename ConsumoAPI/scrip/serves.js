@@ -1,4 +1,5 @@
 import { setState, getState } from "./state.js";
+import { guardarPersonajes } from "./persistencia.js";
 
 const URL = "https://rickandmortyapi.com/api/character";
 
@@ -18,9 +19,15 @@ export async function loadUsers() {
         console.log(datos);
 
     // setState("users", personajes);
-    setState("users", datos.results);
-    setState("count", datos.info.count);   // total personajes
-    setState("totalPages", datos.info.pages); // total páginas
+        setState("users", datos.results);
+        setState("count", datos.info.count);   // total personajes
+        setState("totalPages", datos.info.pages); // total páginas
+
+        // guardar en el localStorch
+        guardarPersonajes({
+            users: datos.results,
+            page: page
+        });
     } catch (error) {
         alert("Eroor al obtener los personajes");
     }
