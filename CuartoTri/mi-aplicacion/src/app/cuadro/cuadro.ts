@@ -12,4 +12,14 @@ export class Cuadro {
   colorRojo(){
     this.variable = "red"
   }
+
+  colorAzul(){
+    this.variable = "blue"
+  }
+  colorRosa(){
+    this.variable = "pink"
+  }
+  colorMorado(){
+    this.variable = "purple"
+  }
 }

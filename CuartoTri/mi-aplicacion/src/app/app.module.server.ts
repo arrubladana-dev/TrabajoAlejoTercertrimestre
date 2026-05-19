@@ -9,4 +9,20 @@ import { serverRoutes } from './app.routes.server';
   providers: [provideServerRendering(withRoutes(serverRoutes))],
   bootstrap: [App],
 })
-export class AppServerModule {}
+export class AppServerModule {
+  variable = "blanco"
+
+  colorRojo(){
+    this.variable = "red"
+  }
+
+  colorAzul(){
+    this.variable = "blue"
+  }
+  colorRosa(){
+    this.variable = "pink"
+  }
+  colorMorado(){
+    this.variable = "purple"
+  }
+}

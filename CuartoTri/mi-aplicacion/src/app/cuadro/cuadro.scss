@@ -1,15 +1,9 @@
-.princi{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .cuadrito{
-    width: 100px;
-    height: 100px;
-    background-color: cadetblue;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
     border-radius: 8px;
+    margin-top: 10px;
 }
-
-
-

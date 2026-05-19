@@ -1,7 +1,10 @@
 
-<h1>Hola wii</h1>
-<p>Mi primera aplicación Angular</p>
-
-<app-cuadro />
-
-
+<div class="princi">
+  <app-cuadro  [class]="variable"/>
+  <div class="conteBoto">
+  <app-boton text="Rojo" (salida)="colorRojo()"  />
+  <app-boton text="Azul" (salida)="colorAzul()"  />
+  <app-boton text="Rosa" (salida)="colorRosa()"  />
+  <app-boton text="Morado" (salida)="colorMorado()"  />
+  </div>
+</div>

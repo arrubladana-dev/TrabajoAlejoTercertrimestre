@@ -8,4 +8,19 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('mi-aplicacion');
+  variable = "balnco"
+
+  colorRojo(){
+    this.variable = "red"
+  }
+
+  colorAzul(){
+    this.variable = "blue"
+  }
+  colorRosa(){
+    this.variable = "pink"
+  }
+  colorMorado(){
+    this.variable = "purple"
+  }
 }
