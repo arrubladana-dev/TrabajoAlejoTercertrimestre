@@ -10,19 +10,5 @@ import { serverRoutes } from './app.routes.server';
   bootstrap: [App],
 })
 export class AppServerModule {
-  variable = "blanco"
-
-  colorRojo(){
-    this.variable = "red"
-  }
-
-  colorAzul(){
-    this.variable = "blue"
-  }
-  colorRosa(){
-    this.variable = "pink"
-  }
-  colorMorado(){
-    this.variable = "purple"
-  }
+  
 }

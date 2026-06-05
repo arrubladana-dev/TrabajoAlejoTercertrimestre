@@ -7,19 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './cuadro.scss',
 })
 export class Cuadro {
-  variable = "blanco"
-
-  colorRojo(){
-    this.variable = "red"
-  }
-
-  colorAzul(){
-    this.variable = "blue"
-  }
-  colorRosa(){
-    this.variable = "pink"
-  }
-  colorMorado(){
-    this.variable = "purple"
-  }
+  
 }

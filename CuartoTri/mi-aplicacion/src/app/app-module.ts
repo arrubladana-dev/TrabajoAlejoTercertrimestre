@@ -11,4 +11,6 @@ import { Boton } from './boton/boton';
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],
 })
-export class AppModule {}
+export class AppModule {
+  
+}
