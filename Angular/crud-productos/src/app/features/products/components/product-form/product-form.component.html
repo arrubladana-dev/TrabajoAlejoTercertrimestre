@@ -1,23 +1,22 @@
 <div class="form-card">
   <h2>Crear Producto</h2>
 
-  <div class="form-group">
-    <label for="nombre">Nombre</label>
-    <input
-      id="nombre"
-      type="text"
-      placeholder="Ingrese el nombre del producto"
-    />
-  </div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Ingrese el nombre del producto" [(ngModel)]="nombre"
 
-  <div class="form-group">
-    <label for="precio">Precio</label>
-    <input
-      id="precio"
-      type="number"
-      placeholder="Ingrese el precio"
-    />
-  </div>
+      />
+    </div>
 
-  <button>Crear</button>
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input id="precio" name="precio" type="number" placeholder="Ingrese el precio" [(ngModel)]="precio" required
+        min="1"
+      />
+    </div>
+
+    <button type="submit" [disabled]="!puedeGuardar">Crear</button>
+  </form>
 </div>
+

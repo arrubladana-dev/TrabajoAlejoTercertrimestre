@@ -1,7 +1,19 @@
 <div class="list-card">
   <h2>Lista de Productos</h2>
 
-  <div class="empty-state">
-    No hay productos para mostrar
+  <div *ngIf="productos.length === 0" class="empty-state">
+    <div style="text-align: center;">
+      <div>No hay productos para mostrar</div>
+    </div>
+  </div>
+
+  <div *ngIf="productos.length > 0" class="products-grid">
+    <app-product-card
+      *ngFor="let producto of productos"
+      [producto]="producto"
+    ></app-product-card>
   </div>
 </div>
+
+
+
