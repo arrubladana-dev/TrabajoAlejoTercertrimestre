@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>Galería de Posts</h1>
+
+  <div *ngIf="photos.length === 0" class="empty">
+    No hay publicaciones para mostrar
+  </div>
+
+  <div *ngIf="photos.length > 0" class="posts-grid">
+
+    <app-post-card
+      *ngFor="let item of photos"
+      [photos]="item">
+    </app-post-card>
+
+  </div>
+
+</div>
