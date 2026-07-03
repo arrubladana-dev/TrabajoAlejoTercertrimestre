@@ -2,11 +2,11 @@
 
 <div class="pagination">
 
-  <button (click)="paginaAnterior()"> Anterior</button>
+  <button (click)="paginaAnterior()" [disabled]="paginaActual === 1"> Anterior</button>
 
   <span>Página {{ paginaActual }}</span>
 
-  <button (click)="siguientePagina()" [disabled]="paginaActual === 1">Siguiente </button>
+  <button (click)="siguientePagina()" >Siguiente </button>
 
 </div>
 
