@@ -1,3 +1,13 @@
 <h1>Pokohemon GOO</h1>
 
+<div class="pagination">
+
+  <button (click)="paginaAnterior()"> Anterior</button>
+
+  <span>Página {{ paginaActual }}</span>
+
+  <button (click)="siguientePagina()" [disabled]="paginaActual === 1">Siguiente </button>
+
+</div>
+
 <app-pokemon-list [pokemons]="pokemons$ | async"> </app-pokemon-list>

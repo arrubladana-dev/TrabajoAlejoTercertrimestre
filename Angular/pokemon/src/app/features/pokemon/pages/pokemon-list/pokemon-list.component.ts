@@ -11,4 +11,6 @@ export class PokemonListComponent {
 
   @Input() pokemons: Pokemons[] | null = [];
 
+  search = '';
+
 }

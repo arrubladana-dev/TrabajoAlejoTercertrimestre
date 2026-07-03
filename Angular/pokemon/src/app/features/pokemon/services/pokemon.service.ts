@@ -16,10 +16,10 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(): Observable<Pokemons[]> {
+  getPokemons(limit: number, offset: number): Observable<Pokemons[]> {
 
     return this.http.get<PokemonResponse>(
-      `${this.api}?limit=20&offset=0`
+      `${this.api}?limit=${limit}&offset=${offset}`
     ).pipe(
       switchMap(response => {
 

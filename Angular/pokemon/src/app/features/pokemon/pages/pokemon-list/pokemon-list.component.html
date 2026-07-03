@@ -1,8 +1,13 @@
-<div class="pokemon-container">
+<!-- <div class="search-container">
+  <input
+    type="text"
+    placeholder="Buscar Pokémon..."
+    [(ngModel)]="search">
+</div> -->
 
+<div class="contenedorListas">
   <app-pokemon-card
     *ngFor="let pokemon of pokemons"
     [pokemon]="pokemon">
   </app-pokemon-card>
-
 </div>

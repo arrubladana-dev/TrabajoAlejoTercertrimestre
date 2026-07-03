@@ -12,10 +12,30 @@ import { PokemonService } from './features/pokemon/services/pokemon.service';
 })
 export class AppComponent implements OnInit {
   pokemons$: Observable<Pokemons[]> = of([]);
+  paginaActual = 1;
+  limit = 20;
 
   constructor(private pokemonService: PokemonService) {}
 
+  loadPokemons(): void {
+    const offset = (this.paginaActual - 1) * this.limit;
+    this.pokemons$ = this.pokemonService.getPokemons(this.limit,offset
+    );
+  }
+  siguientePagina(): void {
+    this.paginaActual++;
+    this.loadPokemons();
+  }
+
+  paginaAnterior(): void {
+    if (this.paginaActual > 1) {
+      this.paginaActual--;
+      this.loadPokemons();
+    }
+  }
+
+
   ngOnInit(): void {
-      this.pokemons$ = this.pokemonService.getPokemons();
+    this.loadPokemons();
   }
 }
