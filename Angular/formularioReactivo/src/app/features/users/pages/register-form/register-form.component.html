@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="card">
+        <div class="header">
+            <div class="animal">
+                🦊
+            </div>
+            <h1>Crear Cuenta</h1>
+            <p>¡Únete a nuestra comunidad!</p>
+        </div>
+    <form [formGroup]="form" (ngSubmit)="onClick()">
+
+      <div class="input-group">
+        <label for="nombre">Nombre Completo</label>
+        <input  formControlName="name" type="text" id="nombre" placeholder="Ingresa tu nombre completo" >
+
+        <small class="valido" *ngIf="isValid('name','required')">Campo obligatorio \(._.)/</small>
+
+        <small class="valido" *ngIf="isValid('name','minlength')">Minimo :3 letras  \(._.)/</small>
+      </div>
+
+      <div class="input-group">
+        <label for="correo">Correo Electrónico</label>
+        <input formControlName="email" type="email" id="correo" placeholder="ejemplo@correo.com">
+
+        <small class="valido" *ngIf="isValid('email','required')">Campo obligatorio \(._.)/</small>
+
+        <small class="valido" *ngIf="isValid('email','email')">Correo invalidio  \(. __.)/</small>
+      </div>
+
+      <div class="input-group">
+        <label for="usuario">Nombre de Usuario</label>
+        <input formControlName="nameUser" type="text" id="usuario" placeholder="Nombre de usuario" >
+
+         <small class="valido" *ngIf="isValid('nameUser','required')">Campo obligatorio \(._.)/</small>
+
+          <small class="valido" *ngIf="isValid('nameUser','pattern')">Solo letas  ._ ./</small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input formControlName="passoword" type="password" id="password" placeholder="********" >
+
+        <small class="valido" *ngIf="isValid('passoword','required')">Campo obligatorio \(._.)/</small>
+        <small class="valido" *ngIf="isValid('passoword','minlength')">Minimo 8) letras \(._.)/</small>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmar">Confirmar Contraseña</label>
+        <input formControlName="confirmPassoword" type="password" id="confirmar" placeholder="********" >
+        <small class="valido" *ngIf="isValid('confirmPassoword','required')">Campo obligatorio \(._.)/</small>
+        <small class="valido" *ngIf="isValid('confirmPassoword','passwordsDiferentes')">No coinciden las contraseñas :(/</small>
+      </div>
+
+      <div class="input-group">
+        <label for="edad">Edad</label>
+        <input formControlName="age" type="number" id="edad" placeholder="Edad">
+        <small class="valido" *ngIf="isValid('age','required')">Campo obligatorio \(._.)/</small>
+        <small class="valido" *ngIf="isValid('age','min')">La edad Minima es de 15  \(._.)/</small>
+      </div>
+
+      <div class="checkbox">
+        <input formControlName="termsAndConditions" type="checkbox" id="terminos" >
+        <small class="valido" *ngIf="isValid('termsAndConditions','required')">Campo obligatorio \(._.)//</small>
+        <label for="terminos">
+          Acepto los términos y condiciones
+        </label>
+      </div>
+
+      <button [disabled]="form.invalid" type="submit">
+        Registrarse
+      </button>
+
+    </form>
+
+  </div>
+  <div class="resultado" *ngIf="resumenRegistro">
+
+  <h2>Resumen del registro</h2>
+
+  <p><strong>Nombre:</strong> {{ resumenRegistro.nombre }}</p>
+
+  <p><strong>Correo:</strong> {{ resumenRegistro.correo }}</p>
+
+  <p><strong>Usuario:</strong> {{ resumenRegistro.usuario }}</p>
+
+  <p><strong>Edad:</strong> {{ resumenRegistro.edad }}</p>
+
+  <p>
+    <strong>Términos:</strong>
+    {{ resumenRegistro.aceptaTerminos ? 'Aceptados' : 'No aceptados' }}
+  </p>
+
+</div>
+</div>
